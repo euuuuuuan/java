@@ -1,6 +1,6 @@
 package com.ohgiraffers.section1.literal;
 
-public class application1 {
+public class Application1 {
     public static void main(String[] args) {
         System.out.print("a");
         System.out.print("a");

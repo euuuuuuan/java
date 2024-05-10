@@ -81,5 +81,21 @@ public class Application2 {
         // 주의할 점 : 숫자로 된 문자열 형태의 값도 + 연산을 했을 때 문자열 합치기가 된다.
         System.out.println("123" + "456");
 
+        // 논리값과 논리값의 연산
+        // 논리값 끼리의 연산은 모든 연산자 사용이 불가.
+//        System.out.println(true + false);
+//        System.out.println(true - false);
+//        System.out.println(true * false);
+//        System.out.println(true / false);
+//        System.out.println(true % false);
+
+        // 논리값과 정수의 연산도 마찬가지로 안됨.
+        // 논리값과 실수의 연산도 마찬가지로 안됨.
+        // 논리값과 문자의 연산도 안됨.
+
+        // 논리값과 문자열의 연산
+        System.out.println("============ 논리값과 문자열의 값 연산 ============");
+        System.out.println(true + "a");
+
     }
 }
