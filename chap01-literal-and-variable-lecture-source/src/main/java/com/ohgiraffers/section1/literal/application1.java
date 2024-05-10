@@ -33,5 +33,7 @@ public class application1 {
         // 논리값 출력
         System.out.println(true);
         System.out.println(false);
+
+        ///alt+1 왼쪽 프로젝트창 생성/제거. alt+insert 새프로젝트 생성 단축키.
     }
 }
