@@ -1,4 +1,5 @@
 public class Class {
+    /*
     static void myMethod() {
         System.out.println("I just got executed!");
     }
@@ -8,5 +9,25 @@ public class Class {
         myMethod();
         myMethod();
 
+    }*/
+/*
+    static void myMethod(String fname) {
+        System.out.println(fname + " Refsnes");
     }
+
+    public static void main(String[] args) {
+        myMethod("Liam");
+        myMethod("Jenny");
+        myMethod("Anja");
+
+    }
+*/
+    static int myTest(int x) {
+        return 5 + x;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(myTest(3));
+    }
+
     }
