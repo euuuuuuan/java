@@ -36,6 +36,6 @@ public class Application1 {
 
         int sum = MAX_AGE;
         //int MAX_AGE; // 상수도 변수이고, 변수명이 지정되어 있기때문에 같은 변수명으로 선언 불가.
-
+        //집컴퓨터로 수정했다
     }
 }
