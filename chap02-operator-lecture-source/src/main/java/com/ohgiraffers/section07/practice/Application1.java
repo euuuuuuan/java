@@ -45,17 +45,17 @@ public class Application1 {
         //2.
         System.out.println("10이 15보다 큰지 확인 : " + (10 > 15)); //false
         //3.
-        System.out.println("age가 18이상인지 확인 : " + (age>18)); //false
+        System.out.println("age가 18이상인지 확인 : " + (age > 18)); //false
 
         System.out.println();
 
         //논리 연산자
         boolean a1 = true, b1 = false;
         //1.
-        System.out.println("a1와 b1가 둘 다 참이어야 참을 반환하는 조건문은 a!=b이다. : " + (a!=b)); //true
+        System.out.println("a1와 b1가 둘 다 참이어야 참을 반환하는 조건문은 a!=b이다. : " + (a != b)); //true
         //2.
-        System.out.println("age가 18이상이고 65미만인지 확인 : " + (age>=18 && age<65)); //true
+        System.out.println("age가 18이상이고 65미만인지 확인 : " + (age >= 18 && age < 65)); //true
         //3.
-        System.out.println("x가 10이 아니거나 y가 25 이상인지 확인 : " + (x!=10 || y>25)); //true
+        System.out.println("x가 10이 아니거나 y가 25 이상인지 확인 : " + (x != 10 || y > 25)); //true
     }
 }
