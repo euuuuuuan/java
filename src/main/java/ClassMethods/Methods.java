@@ -1,2 +1,7 @@
-package ClassMethods;public class Methods {
+package ClassMethods;
+
+public class Methods {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
 }
