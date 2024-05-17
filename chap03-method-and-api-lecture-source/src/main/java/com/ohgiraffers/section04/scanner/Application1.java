@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class Application1 {
     public static void main(String[] args) {
 
+
 //        java.util.Scanner sc = new java.util.Scanner(System.in);
 
          // java.lang은 패키지 이름 생략 가능
 //        java.util.Scanner scanner = new java.util.Scanner(System.in);
 
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in); // 스캐너 불러오기
 
 /*        int num = sc.nextInt();
 
