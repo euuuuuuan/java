@@ -137,4 +137,29 @@ public class D_switch {
 
 
     }
+
+    public void meetSwitch () {
+        System.out.println("A가 짝사랑녀 B를 길거리에서 만났다. A가 B에게 할 말은?");
+        System.out.println("1. 안녕 2. 야레야레 못말리는 아가씨 3. 나랑 밥먹을래 나랑 사귈래");
+
+        Scanner scan = new Scanner(System.in);
+        int view = scan.nextInt();
+
+        switch (view) {
+            case 1:
+                System.out.println("안녕?");
+                break;
+            case 2:
+                System.out.println("야레야레 못말리는 아가씨");
+                break;
+            case 3:
+                System.out.println("나랑 밥먹을래 나랑 사귈래");
+                break;
+            default:
+                System.out.println("우리는 사실 남매야.");
+
+        }
+        System.out.println("결국 그들은 개미가 되었다.");
+
+    }
 }
