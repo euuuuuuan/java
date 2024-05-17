@@ -18,7 +18,14 @@ public class Application {
 
 //        cIfElseIf.testSimpleIfElseIfStatement();
 
-        cIfElseIf.testNestedIfElseIfStatement2();
+//        cIfElseIf.testNestedIfElseIfStatement2();
+        cIfElseIf.testNestedIfElseIfStatement();
+
+        D_switch dSwitch = new D_switch();
+
+//        dSwitch.testSimpleSwitchStatement();
+//        dSwitch.testSwitchVendingMachine();
+//        dSwitch.axeSwitch();
     }
     }
 
