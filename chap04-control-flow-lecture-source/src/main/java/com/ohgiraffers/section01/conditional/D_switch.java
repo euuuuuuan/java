@@ -44,7 +44,7 @@ public class D_switch {
                 result = first + second;
                 break;
             case '-':
-                result = first + second;
+                result = first - second;
                 break;
             case '/':
                 result = first / second;
@@ -125,6 +125,10 @@ public class D_switch {
 
             case "3":
                 System.out.println("오호 ~ 정직하구나 금도끼, 은도끼, 쇠도끼 다 가져가거라~");
+                break;
+
+            default:
+                System.out.println("다른 것을 입력하였구나. 썩 물럿거라!!!");
                 break;
 
         }
