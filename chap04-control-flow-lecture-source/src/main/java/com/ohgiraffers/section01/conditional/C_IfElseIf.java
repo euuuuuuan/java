@@ -58,19 +58,33 @@ public class C_IfElseIf {
          *  그래서 학생의 이름과 점수를 입력하면 자동으로 학점 등급이 계산되는 프로그램을 만들기로 했다.
          * */
         Scanner sc = new Scanner(System.in);
-//        int point = sc.nextInt();
-        int point = 100;
-        String name = "기본이름";
-        String grade = "F";
+
+        System.out.println("학생의 이름을 입력하세요.");
+        String name = sc.nextLine();
+        String grade; // 초기화 값만 지정해 둠. 오류방지
+
+        System.out.println("학생의 점수를 입력하세요.");
+        int point = sc.nextInt();
+
 
         if (point >= 90) {
-            System.out.println("A");
+            grade = "A";
+            if (point >= 95) {
+            grade += "+";
+            }
         } else if (point > 80) {
-            System.out.println("B");
+            grade = "B";
+            if (point >= 85) {
+                grade += "+";
+            }
+
         } else if (point > 70) {
-            System.out.println("C");
+            grade = "C";
+            if (point >= 75) {
+                grade += "+";
+            }
         } else {
-            System.out.println("D");
+            grade = "D";
         }
 
 
@@ -85,6 +99,7 @@ public class C_IfElseIf {
          *  추가로 각 등급의 중간점수(95, 85, 75..)인 경우 '+'를 붙여서 등급을 세분화 하다보니 신경쓸게 이만 저만이 아니다.
          *  그래서 학생의 이름과 점수를 입력하면 자동으로 학점 등급이 계산되는 프로그램을 만들기로 했다.
          * */
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("학생의 이름을 입력하세요 : ");
