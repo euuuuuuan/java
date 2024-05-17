@@ -16,7 +16,7 @@ public class Application2 {
         String greeting = sc.nextLine();
         System.out.println(greeting);
 
-        System.out.println("인사말을 입력해주세요."); // 안녕하세요 -> 이거만 저장
+        System.out.println("인사말을 입력해주세요."); // 안녕하세요 -> 이거만 저장함
         String greeting2 = sc.next();
         System.out.println(greeting2);
     }
