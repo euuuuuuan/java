@@ -25,7 +25,8 @@ public class Application {
 
 //        dSwitch.testSimpleSwitchStatement();
 //        dSwitch.testSwitchVendingMachine();
-        dSwitch.axeSwitch();
+//        dSwitch.axeSwitch();
+        dSwitch.meetSwitch();
     }
     }
 
