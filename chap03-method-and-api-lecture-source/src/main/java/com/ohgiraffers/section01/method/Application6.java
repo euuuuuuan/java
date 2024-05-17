@@ -18,8 +18,8 @@ public class Application6 {
 
         Application6 app6 = new Application6();
         String returnTest = app6.testMethod();
-
         System.out.println(returnTest);
+
         System.out.println(app6.testMethod()); // 저장하지 않고 바로 출력 가능
 
     }
