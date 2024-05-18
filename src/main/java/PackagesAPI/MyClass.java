@@ -1,11 +1,14 @@
+package PackagesAPI;
+
 import java.util.Scanner;
 
-public class PackagesAPI {
+public class MyClass
+{
     public static void main(String[] args) {
         Scanner myObj = new Scanner(System.in);
-        System.out.print("Enter username: ");
+        System.out.println("Enter username");
 
         String userName = myObj.nextLine();
-        System.out.print("Username is: " + userName);
+        System.out.println("Username is: " + userName);
     }
 }
