@@ -4,6 +4,17 @@ import java.util.Scanner;
 
 public class A_for {
 
+    public void testExample0() {
+
+        /*
+        * "안녕하세요" 를 5번 출력하기
+        * */
+        Scanner sc = new Scanner(System.in);
+        for(int i = 1; i < 6; i++) {
+            System.out.println("안녕하세요.");
+        }
+    }
+
     public void testSimpleForStatement() {
 
         /*
@@ -11,7 +22,7 @@ public class A_for {
         *
         * for([초기식]); [조건식]; [증감식];) {
         *
-        *   // 조건을 만족할 겨우 수행할 구문
+        *   // 조건을 만족할 경우 수행할 구문
         *
         * }
         * */
@@ -197,4 +208,7 @@ public class A_for {
             System.out.println("반드시 2~9 사이의 양수를 입력해야 합니다.");
         }
 }
+
+
+
 }
