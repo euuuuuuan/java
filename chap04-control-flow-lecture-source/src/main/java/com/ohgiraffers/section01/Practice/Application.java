@@ -6,7 +6,10 @@ public class Application {
 //        pra1.condition1();
 
         Practice2 pra2 = new Practice2();
-        pra2.condition2();
+//        pra2.condition2();
+
+        Practice3 pra3 = new Practice3();
+        pra3.stars();
 
     }
 }

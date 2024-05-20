@@ -148,6 +148,34 @@ public class A_for {
         * 두개의 숫자를 입력받아서 작은 수에서 큰 수까지의 합계를 구하세요
         * 단, 두 숫자는 같은 숫자를 입력하지 않는다는 조건
         * */
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("첫번째 정수 입력 : ");
+        int first = sc.nextInt();
+
+        System.out.println("두번째 정수 입력 : ");
+        int second = sc.nextInt();
+
+        System.out.println("first = " + first);
+        System.out.println("second = " + second);
+
+        int total = 0;
+
+        if(first > second) {
+
+            // 첫번째 정수가 더 큰 경우 (first > second)
+            for(int i = second; i <= first; i++) {
+                total = total + i;
+            }
+
+        } else {
+
+            // second > first
+            for(int i = first; i <= second; i++) {
+                total = total + i;
+            }
+        }
+        System.out.println("total = " + total);
     }
 
     public void printSimpleGugudan() {
