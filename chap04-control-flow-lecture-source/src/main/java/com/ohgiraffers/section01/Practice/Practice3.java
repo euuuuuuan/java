@@ -38,7 +38,7 @@ public class Practice3 {
 
         for (int i = 1; i <= row; i++) { // 1부터 n개의 줄 생성
 
-            for (int j = 1; j <= row-i; j++) { // 행의 순서만큼(첫번째 줄 1, 두번째 줄 2...) 반복
+            for (int j = 1; j > row-i; j++) { // 행의 순서만큼(첫번째 줄 1, 두번째 줄 2...) 반복
                 System.out.print(" ");
             }
             for (int k = 1; k <= row+i; k++){
