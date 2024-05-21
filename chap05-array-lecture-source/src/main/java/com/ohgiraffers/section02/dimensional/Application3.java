@@ -23,7 +23,6 @@ public class Application3 {
 
         // 일차원 배열
         int[] arr = new int[5];
-
         iarr[2] = arr; // 미리 할당해 둔 배열을 이용해서 활용 가능하다.
 
         iarr[0][0] = 1;
@@ -44,7 +43,7 @@ public class Application3 {
 
         // 모든 배열에 순차적으로 접근해서 1씩 증가하는 value를 할당해 줌
         for (int i = 0; i < iarr.length; i++) {
-            for(int j =0; j < iarr[i].length; j++) {
+            for(int j = 0; j < iarr[i].length; j++) {
                 iarr[i][j] = ++value;
             }
         }
