@@ -34,12 +34,13 @@ public class Application4 {
         * */
         // {1, 2, 3, 4, 5}
         System.out.println();
+        int[] arr3 = {5, 6, 7, 6, 8};
         System.out.println("======= 향상된 for 문 =======");
-        for(int i : arr2) {
-            i += 10;
-//            System.out.print(i + " ");
+        for(int i : arr3) {
+//            i += 10;
+            System.out.print(i + " ");
         }
-
+        System.out.println();
         System.out.println("======= 10씩 더한 후 출력 =======");
         for(int i : arr2) {
             System.out.print(i + " ");
