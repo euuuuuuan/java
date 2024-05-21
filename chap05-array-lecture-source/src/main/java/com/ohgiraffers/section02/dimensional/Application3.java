@@ -42,12 +42,24 @@ public class Application3 {
         int value = 0;
 
         // 모든 배열에 순차적으로 접근해서 1씩 증가하는 value를 할당해 줌
-        for (int i = 0; i < iarr.length; i++) {
-            for(int j = 0; j < iarr[i].length; j++) {
-                iarr[i][j] = ++value;
-            }
-        }
+//        for (int i = 0; i < iarr.length; i++) {
+//            for(int j = 0; j < iarr[i].length; j++) {
+//                iarr[i][j] = ++value;
+//            }
+//        }
+        /*
+        {배열1주소값, 배열2주소값, 배열3주소값}
 
+        [배열1]
+        1 2 3 4 5 6
+
+        [배열2]
+        1 2 3 4 5 6
+
+        [배열3]
+        1 2 3 4 5 6
+
+        * */
         // 모든 배열에 순차적으로 접근해서 값을 출력한다.
         for(int i = 0; i < iarr.length; i++) {
             for(int j = 0; j < iarr[i].length; j++) {
