@@ -9,6 +9,7 @@ public class App1 {
         cars.add("Audi");
         cars.add("Volvo");
         cars.add("Honda");
+        cars.add("Saver");
         for (int i = 0; i < cars.size(); i++) {
             System.out.println(cars.get(i));
         }
