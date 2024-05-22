@@ -28,6 +28,7 @@ public class App3 {
 
         for (int i : myNumbers) {
             System.out.println(i);
+            System.out.println(i+1);
         }
     }
 }
