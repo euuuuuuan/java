@@ -1,2 +1,12 @@
-package ConditionalExcercise;public class if_test {
+package ConditionalExcercise;
+
+import java.util.Scanner;
+
+public class if_test {
+
+    Scanner scan = new Scanner(System.in);
+    int age = scan.nextInt();
+    int height = scan.nextInt();
+
+    
 }
