@@ -51,8 +51,8 @@ public class Car {
 
     // 자동차가 달리는 중이면 시동을 끌 수 없다.
     public void turnOff() {
-        if(isOn) {
-            if(speed > 0) {
+        if (isOn) {
+            if (speed > 0) {
                 System.out.println("달리는 상태에서는 시동을 끌 수 없습니다. 차를 우선 멈춰주세요.");
             } else {
                 this.isOn = false;
