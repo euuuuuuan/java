@@ -45,7 +45,7 @@ public class Laptop {
     public void turnOff() {
         if(power) {
             if (boost > 0) {
-                System.out.println("Please tunn off your booster first");
+                System.out.println("Please turn off your booster first");
             } else {
                 this.power = false;
                 System.out.println("Turning off system... Please, turn on if you want to use your system again");
