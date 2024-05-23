@@ -1,5 +1,7 @@
 package com.ohgiraffers.section03.abstraction;
 
+import java.util.Scanner;
+
 public class Application {
 
     // 객체지향 프로그래밍에서 객체와 클래스를 설계 -> 추상화
@@ -74,8 +76,77 @@ public class Application {
         *
         * 2. 객체간 상호작용
         * 1) 카레이서가 수신할 수 있는 메시지 (카레이서가 해야하는 일) -> 자동차를 움직이게 해야함.
+        *   - 시동을 걸어라
+        *   - 엑셀레이터를 밟아라
+        *   - 브레이크를 밟아라
+        *   - 시동을 꺼라
+        *
         * 2) 자동차가 수신할 수 있는 메시지 (자동차가 해야하는 일)
+        *   - 시동을 걸어라
+        *   - 앞으로 가라
+        *   - 멈춰라
+        *   - 시동을 꺼라
+        *
+        * 3. 커뮤니케이션 다이어그램
+        *   1) 시동걸기
+        *   - 사용자 --> 시동을 걸어라 --> 카레이서 --> 시동을 걸어라 --> 자동차
+        *   2) 가속하기
+        *   - 사용자 --> 엑셀레이터를 밟아라 --> 카레이서 --> 앞으로 가라 --> 자동차
+        *   3) 정지하기
+        *   - 사용자 --> 브레이크를 밟아라 --> 카레이서 --> 멈춰라 --> 자동차
+        *   4) 시동끄기
+        *   - 사용자 --> 시동을 꺼라 --> 카레이서 --> 시동을 꺼라 --> 자동차
+        *
+        * 4. 클래스 설계하기
+        *   1) 카레이서 클래스
+        *       - 속성 : 자동차
+        *       - 행위 : 시동을 걸어라, 엑셀레이터를 밟아라, 브레이크를 밟아라, 시동을 꺼라
+        *
+        *   2) 자동차 클래스
+        *       - 속성 : 현재 시속, 시동 상태
+        *       - 행위 : 시동을 걸어라, 앞으로 가라, 멈춰라, 시동을 꺼라
         * */
+
+        // 카레이서 객체 만들기
+        CarRacer carRacer = new CarRacer();
+
+        Scanner sc = new Scanner(System.in);
+
+        while(true) {
+            System.out.println("======= 카레이싱 프로그램 =======");
+            System.out.println("1. 시동 걸기");
+            System.out.println("2. 전진");
+            System.out.println("3. 정지");
+            System.out.println("4. 시동 끄기");
+            System.out.println("9. 프로그램 종료");
+            System.out.print("메뉴 선택 : ");
+
+            int num = sc.nextInt();
+
+            switch (num) {
+                case 1:
+                    carRacer.startUp();
+                    break;
+                case 2:
+                    carRacer.stepAccelerator();
+                    break;
+                case 3:
+                    carRacer.stepBreak();
+                    break;
+                case 4:
+                    carRacer.turnOff();
+                    break;
+                case 9:
+                    System.out.println("프로그램을 종료합니다.");
+                    break;
+                default:
+                    System.out.println("잘못된 번호를 입력하셨습니다.");
+                    break;
+            }
+            if(num == 9) {
+                break;
+            }
+        }
 
     }
 }
