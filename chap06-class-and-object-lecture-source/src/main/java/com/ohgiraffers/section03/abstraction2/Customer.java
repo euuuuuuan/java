@@ -1,2 +1,4 @@
-package com.ohgiraffers.section03.abstraction2;public class Customer {
+package com.ohgiraffers.section03.abstraction2;
+
+public class Customer {
 }
