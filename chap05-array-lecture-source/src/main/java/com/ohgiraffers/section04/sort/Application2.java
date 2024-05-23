@@ -20,12 +20,12 @@ public class Application2 {
             }
         }
 
-        for(int i = 0; i < iarr.length; i++) {
-            System.out.println(iarr[i] + " ");
+//        for(int i = 0; i < iarr.length; i++) {
+//            System.out.println(iarr[i] + " ");
+//        }
+        for(int i : iarr) {
+            System.out.println(i + " ");
         }
-/*        for(int i : iarr) {
-            System.out.println(iarr[i] + " ");
-        }*/
 
 
     }
