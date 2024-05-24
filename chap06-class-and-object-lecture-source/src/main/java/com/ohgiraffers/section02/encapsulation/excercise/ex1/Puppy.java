@@ -11,7 +11,11 @@ public class Puppy {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age > 0) {
+            this.age = age;
+        } else {
+            this.age = Math.abs(age); // 절대값
+        }
     }
 
     public void setBreed(String breed) {
@@ -19,6 +23,6 @@ public class Puppy {
     }
 
     public String getInfo() {
-        return "강아지의 이름은 " + name + "이고, 나이는 " + age + "살이며, 종은 " + breed + "입니다.";
+        return "강아지의 이름은 " + this.name + "이고, 나이는 " + age + "살이며, 종은 " + breed + "입니다.";
     }
 }
