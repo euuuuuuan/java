@@ -16,15 +16,16 @@ public class Laptop {
 
     public void boostUp() {
         if (power) {
-            if(boost <= 300) {
+            if (boost <= 300) {
                 System.out.println("Booster is on");
                 boost += 100;
                 System.out.println("Laptop performance is " + boost + " high now");
             }
-            if(boost == 400){
-                System.out.println(boost + "boost now");
+            if (boost == 400) {
+                System.out.println(boost + " boost now.");
+                System.out.println("Booster is maximum now.");
             }
-            if(boost > 400) {
+            if (boost > 400) {
 //                boost -= 100;
                 System.out.println("Warning : performance is " + boost + " high now");
                 System.out.println("Booster is maximum now.");
@@ -34,16 +35,17 @@ public class Laptop {
             System.out.println("Laptop is off. Please turn on your laptop first");
         }
     }
+
     public void boostDown() {
-        if(power) {
+        if (power) {
             System.out.println("Slowing down your booster");
             boost -= 100;
             System.out.println("Laptop performance is " + boost + " now");
-            if (this.boost > 0) {
+            if (this.boost == 0) {
 //                this.boost = 0;
-                System.out.println("Slowing down booster...");
+                System.out.println("Booster off");
 
-            } else {
+            } else if (this.boost < 0) {
                 System.out.println("Booster is already off");
             }
         } else {
@@ -52,7 +54,7 @@ public class Laptop {
     }
 
     public void turnOff() {
-        if(power) {
+        if (power) {
             if (boost > 0) {
                 System.out.println("Please turn off your booster first");
             } else {
