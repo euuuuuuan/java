@@ -43,5 +43,13 @@ public class Application {
         r1.calcArea(); // 넓이 출력
         r1.calcRound(); // 둘레 출력
 
+        // 가변인자
+//        pt.testVariableLengthArrayParameter("이름");
+        pt.testVariableLengthArrayParameter("홍길동"); // 가변인자가 전달되지 않아도 괜찮음.
+        pt.testVariableLengthArrayParameter("홍길동", "볼링"); // 1개 가능
+        pt.testVariableLengthArrayParameter("홍길동", "볼링", "당구"); // 2개 가능
+        pt.testVariableLengthArrayParameter("신사임당", new String[] {"테니스", "서예"}); // 배열도 가능
+
+
     }
 }
