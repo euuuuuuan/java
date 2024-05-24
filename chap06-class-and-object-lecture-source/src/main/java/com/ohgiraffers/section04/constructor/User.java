@@ -58,8 +58,8 @@ public class User {
 
         System.out.println("User 클래스의 id, pwd, name을 초기화하는 생성자를 호출함...");
     }
-        // 모든 필드를 초기화 하는 생성자 (id, pwd, name, enrollDate)
 
+        // 모든 필드를 초기화 하는 생성자 (id, pwd, name, enrollDate)
         public User(String id, String pwd, String name, java.util.Date enrollDate) {
 
 //            this.id = id;
