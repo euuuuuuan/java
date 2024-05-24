@@ -16,13 +16,19 @@ public class Laptop {
 
     public void boostUp() {
         if (power) {
-            System.out.println("Booster is on");
-            boost += 100;
-            System.out.println("Laptop performance is " + boost + " high now");
-            if(boost >= 400) {
-                System.out.println("Warning : performance is " + boost + " high now"); // this를 안쓸 때와
+            if(boost <= 300) {
+                System.out.println("Booster is on");
+                boost += 100;
+                System.out.println("Laptop performance is " + boost + " high now");
+            }
+            if(boost == 400){
+                System.out.println(boost + "boost now");
+            }
+            if(boost > 400) {
+//                boost -= 100;
+                System.out.println("Warning : performance is " + boost + " high now");
                 System.out.println("Booster is maximum now.");
-                boost -= 100;
+
             }
         } else {
             System.out.println("Laptop is off. Please turn on your laptop first");
@@ -31,9 +37,12 @@ public class Laptop {
     public void boostDown() {
         if(power) {
             System.out.println("Slowing down your booster");
+            boost -= 100;
+            System.out.println("Laptop performance is " + boost + " now");
             if (this.boost > 0) {
-                this.boost = 0; // this를 쓸 때의 차이는?
-                System.out.println("Turning off booster...Please wait");
+//                this.boost = 0;
+                System.out.println("Slowing down booster...");
+
             } else {
                 System.out.println("Booster is already off");
             }
