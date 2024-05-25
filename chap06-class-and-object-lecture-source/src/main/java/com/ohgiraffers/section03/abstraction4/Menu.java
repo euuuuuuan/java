@@ -89,6 +89,11 @@ public class Menu {
             case 0:
                 showingMenu();
                 break;
+            case 1:
+                coffeeMenu();
+                order.price();
+                order.count();
+                break;
             case 8:
                 desertsMenu();
                 break;
