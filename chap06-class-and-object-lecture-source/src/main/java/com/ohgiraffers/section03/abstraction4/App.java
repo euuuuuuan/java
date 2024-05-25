@@ -43,26 +43,88 @@ public class App {
          *       주문에 따라 커피를 만들어라(커피객체 반환)
          *       재고량을 관리
          * */
-        Kiosk kiosk = new Kiosk();
-        Scanner scan = new Scanner(System.in);
+//        Kiosk kiosk = new Kiosk();
+//        Scanner scan = new Scanner(System.in);
+//
+//        while (true) {
+//            System.out.println("========== Welcome to Euanbottle ==========");
+//            System.out.println("1. Order");
+//            System.out.println("2. Show me the menu you've got");
+//            System.out.println("Please enter the number you want");
+//
+//            int num = scan.nextInt();
+//            switch (num) {
+//                case 1:
+//                    kiosk.receivingOrder();
+//                case 2:
+//                    kiosk.showingMenu();
+//                    System.out.print("Please enter the number you want : ");
+//
+//                    int num2 = scan.nextInt();
+//                    switch (num2) {
+//                        /*case 1:
+//                            kiosk.coffee();
+//                            if (num2 == 8) {
+//                                kiosk.deserts();
+//                                break;
+//                            } else if (num2 == 9) {
+//                                kiosk.nonCoffee();
+//                                break;
+//                            } else if (num2 == 0) {
+//                                kiosk.showingMenu();
+//                                break;
+//                            } else {
+//                                System.out.println("You entered an invalid number.");
+//                            }*/
+///*
+//                        case 2:
+//                            kiosk.nonCoffee();
+//
+//                            if (num == 8) {
+//                                kiosk.tea();
+//                                break;
+//                            } else if (num == 9) {
+//                                break;
+//                            } else if (num == 0) {
+//                                break;
+//                            } else {
+//                                System.out.println("You entered an invalid number.");
+//                            }
+//
+//                        case 3:
+//                            kiosk.tea();
+//
+//                            if (num == 8) {
+//                                kiosk.deserts();
+//                                break;
+//                            } else if (num == 9) {
+//                                break;
+//                            } else if (num == 0) {
+//                                break;
+//                            } else {
+//                                System.out.println("You entered an invalid number.");
+//                            }
+//
+//                        case 4:
+//                            kiosk.deserts();
+//
+//                            if (num == 8) {
+//                                kiosk.coffee();
+//                                break;
+//                            } else if (num == 9) {
+//                                break;
+//                            } else if (num == 0) {
+//                                break;
+//                            } else {
+//                                System.out.println("You entered an invalid number.");
+//                            }*/
+//                    }
+//                    break;
+//            }
+//        }
 
-        while(true) {
-            System.out.println("==========Welcome to Euanbottle");
-            System.out.println("1. Looking into the Kiosk screen");
-            System.out.println("2. Show me the menu you've got");
-
-            int num = scan.nextInt();
-
-            switch (num) {
-                case 1:
-                    kiosk.showingMenu();
-                    break; 
-
-            }
-        }
-
+//        Kiosk kiosk = new Kiosk();
 //        kiosk.menu();
-
 //        new Kiosk().menu();
     }
 }
