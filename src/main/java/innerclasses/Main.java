@@ -1,4 +1,4 @@
-package innerClasses;
+package innerclasses;
 
 class OuterClass {
     int x = 10;
