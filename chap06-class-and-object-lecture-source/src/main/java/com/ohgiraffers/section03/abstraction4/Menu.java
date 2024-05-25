@@ -10,9 +10,10 @@ public class Menu {
     public void firstScreen() {
 
         System.out.println("========== Welcome to EuanBottle ==========");
-        System.out.println("1. Menu");
-        System.out.println("2. Order");
-        System.out.println("0. Exit");
+        System.out.println("1) Menu");
+        System.out.println("2) Order");
+        System.out.println("0) Exit");
+        System.out.println("===========================================");
         System.out.print("Please enter the number you want : ");
 
         int option = scan.nextInt();
@@ -21,11 +22,13 @@ public class Menu {
                 System.out.println("Please put the number you are interested in down below");
                 System.out.println("========== Euanbottle menu ==========");
                 showingMenu();
+                System.out.println("=====================================");
                 break;
             case 0:
                 System.out.println("Thanks for visit! Hava a good day! :)");
                 break;
             default:
+                firstScreen();
                 System.out.println("Please enter a valid option");
                 System.out.println();
                 break;
@@ -58,6 +61,7 @@ public class Menu {
                 desertsMenu();
                 break;
             default:
+                showingMenu();
                 System.out.println("Invalid choice");
                 break;
         }
@@ -76,12 +80,23 @@ public class Menu {
         System.out.println("8) Previous");
         System.out.println("9) Next");
         System.out.println("0) Exit");
+        System.out.println("============================");
         System.out.print("Enter your choice: ");
         int option = scan.nextInt();
 
         switch (option) {
             case 0:
                 showingMenu();
+                break;
+            case 8:
+                desertsMenu();
+                break;
+            case 9:
+                nonCoffeeMenu();
+                break;
+            default:
+                coffeeMenu();
+                System.out.println("Invalid choice");
                 break;
         }
 
@@ -97,8 +112,27 @@ public class Menu {
         System.out.println("8) Previous");
         System.out.println("9) Next");
         System.out.println("0) Exit");
+        System.out.println("================================");
         System.out.print("Enter your choice: ");
         int option = scan.nextInt();
+
+        switch (option) {
+            case 0:
+                showingMenu();
+                break;
+            case 8:
+                coffeeMenu();
+                break;
+            case 9:
+                teaMenu();
+                break;
+            default:
+                nonCoffeeMenu();
+                System.out.println("Invalid choice");
+                break;
+        }
+
+
     }
 
     public void teaMenu() {
@@ -112,8 +146,25 @@ public class Menu {
         System.out.println("8) Previous");
         System.out.println("9) Next");
         System.out.println("0) Exit");
+        System.out.println("=========================");
         System.out.print("Enter your choice: ");
         int option = scan.nextInt();
+
+        switch (option) {
+            case 0:
+                showingMenu();
+                break;
+            case 8:
+                nonCoffeeMenu();
+                break;
+            case 9:
+                desertsMenu();
+                break;
+            default:
+                teaMenu();
+                System.out.println("Invalid choice");
+                break;
+        }
     }
 
     public void desertsMenu() {
@@ -126,7 +177,24 @@ public class Menu {
         System.out.println("8) Previous");
         System.out.println("9) Next");
         System.out.println("0) Exit");
+        System.out.println("=============================");
         System.out.print("Enter your choice: ");
         int option = scan.nextInt();
+
+        switch (option) {
+            case 0:
+                showingMenu();
+                break;
+            case 8:
+                teaMenu();
+                break;
+            case 9:
+                coffeeMenu();
+                break;
+            default:
+                desertsMenu();
+                System.out.println("Invalid choice");
+                break;
+        }
     }
 }
