@@ -6,6 +6,7 @@ public class Menu {
 
     Scanner scan = new Scanner(System.in);
     User user = new User();
+    Order order = new Order();
 
     public void firstScreen() {
 
@@ -19,7 +20,7 @@ public class Menu {
         int option = scan.nextInt();
         switch (option) {
             case 1:
-                System.out.println("Please put the number you are interested in down below");
+                System.out.println("Please enter the number you are interested in down below");
                 System.out.println("========== Euanbottle menu ==========");
                 showingMenu();
                 System.out.println("=====================================");
