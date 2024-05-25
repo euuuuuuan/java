@@ -40,7 +40,7 @@ public class Order {
 
     public void count() {
         this.count += 1;
-        System.out.println("The count you've picked fow now is: " + count + "cup(s)");
+        System.out.println("The count you've picked for now is: " + count + "cup(s)");
     }
     //    public String getInfo () {
 //        return
