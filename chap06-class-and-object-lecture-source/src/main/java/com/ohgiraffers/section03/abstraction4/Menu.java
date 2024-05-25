@@ -73,10 +73,10 @@ public class Menu {
         System.out.println("1) Espresso \t 3000 KRW");
         System.out.println("2) Americano \t 3000 KRW");
         System.out.println("3) Latte     \t 3500 KRW");
-        System.out.println("4) Coldbrew \t 3500 KRW");
-        System.out.println("5) Cappuccino \t 4000 KRW");
-        System.out.println("6) Flatwhite \t 4000 KRW");
-        System.out.println("7) Macchiato \t 4000 KRW");
+//        System.out.println("4) Coldbrew \t 3500 KRW");
+//        System.out.println("5) Cappuccino \t 4000 KRW");
+//        System.out.println("6) Flatwhite \t 4000 KRW");
+//        System.out.println("7) Macchiato \t 4000 KRW");
 
         System.out.println("8) Previous");
         System.out.println("9) Next");
@@ -90,9 +90,21 @@ public class Menu {
                 showingMenu();
                 break;
             case 1:
-                coffeeMenu();
-                order.price();
+                int coffee1 = order.coffee1;
+//                coffeeMenu();
                 order.count();
+                order.priceCoffee();
+                break;
+            case 2:
+                int coffee2 = order.coffee2;
+//                coffeeMenu();
+                order.count();
+                order.priceCoffee();
+                break;
+            case 3:
+                coffeeMenu();
+                order.count();
+                order.priceCoffee();
                 break;
             case 8:
                 desertsMenu();
@@ -112,8 +124,8 @@ public class Menu {
         System.out.println("========== Non-Coffee ==========");
         System.out.println("1) Hot Chocolate \t 4000 KRW");
         System.out.println("2) Milkshake \t 5000 KRW");
-        System.out.println("3) Smoothie \t 5500 KRW");
-        System.out.println("4) Lemonade \t 5500 KRW");
+        System.out.println("3) Lemonade \t 5500 KRW");
+//        System.out.println("4) Smoothie \t 5500 KRW");
 
         System.out.println("8) Previous");
         System.out.println("9) Next");
@@ -125,6 +137,18 @@ public class Menu {
         switch (option) {
             case 0:
                 showingMenu();
+                break;
+            case 1:
+                nonCoffeeMenu();
+                order.count();
+                break;
+            case 2:
+                nonCoffeeMenu();
+                order.count();
+                break;
+            case 3:
+                nonCoffeeMenu();
+                order.count();
                 break;
             case 8:
                 coffeeMenu();
@@ -144,10 +168,10 @@ public class Menu {
     public void teaMenu() {
         System.out.println("========== Tea ==========");
         System.out.println("1) Apple Tea \t 4500 KRW");
-        System.out.println("2) Mango Tea \t 5000 KRW");
-        System.out.println("3) Jasmine Tea \t 4500 KRW");
-        System.out.println("4) Green Tea \t 5500 KRW");
-        System.out.println("5) Mint Tea \t 6000 KRW");
+        System.out.println("2) Jasmine Tea \t 4500 KRW");
+        System.out.println("3) Green Tea \t 5500 KRW");
+        System.out.println("4) Mint Tea \t 6000 KRW");
+//        System.out.println("2) Mango Tea \t 5000 KRW");
 
         System.out.println("8) Previous");
         System.out.println("9) Next");
@@ -160,6 +184,21 @@ public class Menu {
             case 0:
                 showingMenu();
                 break;
+            case 1:
+                teaMenu();
+                order.count();
+                break;
+            case 2:
+                teaMenu();
+                order.count();
+                break;
+            case 3:
+                teaMenu();
+                order.count();
+                break;
+            case 4:
+                teaMenu();
+                order.count();
             case 8:
                 nonCoffeeMenu();
                 break;
@@ -191,6 +230,18 @@ public class Menu {
             case 0:
                 showingMenu();
                 break;
+            case 1:
+                desertsMenu();
+                order.count();
+            case 2:
+                desertsMenu();
+                order.count();
+            case 3:
+                desertsMenu();
+                order.count();
+            case 4:
+                desertsMenu();
+                order.count();
             case 8:
                 teaMenu();
                 break;
