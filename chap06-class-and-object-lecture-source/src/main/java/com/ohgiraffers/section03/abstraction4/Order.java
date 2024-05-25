@@ -8,46 +8,36 @@ public class Order {
     private String temp; // Iced or Hot
     private String eat; // for here or take away
 
-    public void price() {
-        if (price == 3000) {
-            this.price += price;
-            System.out.println("The price is: $" + price);
-        }
-        else if (price == 3500) {
-            this.price += price;
-            System.out.println("The price is: $" + price);
-        }
-        else if (price == 4000) {
-            this.price += price;
-            System.out.println("The price is: $" + price);
-        }
-        else if (price == 4500) {
-            this.price += price;
-            System.out.println("The price is: $" + price);
-        }
-        else if (price == 5000) {
-            this.price += price;
-            System.out.println("The price is: $" + price);
-        }
-        else if (price == 5500) {
-            this.price += price;
-            System.out.println("The price is: $" + price);
-        }
-        else if (price == 6000) {
-            this.price += price;
-            System.out.println("The price is: $" + price);
-        } else if (price > 6000) {
-            this.price += price;
-            System.out.println("The total price is: $" + price);
+//    Menu menu = new Menu();
+
+    int coffee1 = 3000; int coffee2 = 3000; int coffee3 = 3500;
+//    private Menu menu;
+
+    public void priceCoffee() {
+        if (this.coffee1 == 3000) {
+            System.out.println("You've chosen cuppa Espresso " + this.coffee1 + " KRW");
+//            menu.coffeeMenu();
+        } else if (this.coffee2 == 3000) {
+            System.out.println("You've chosen cuppa Americano " + this.coffee2 + " KRW");
+//            menu.coffeeMenu();
+        } else if (this.coffee3 == 3500) {
+            System.out.println("You've chosen cuppa Latte " + this.coffee3 + " KRW");
+//            menu.coffeeMenu();
         } else {
-            System.out.println("Error");
+            this.price += this.coffee1 + this.coffee2 + this.coffee3;
+            System.out.println("The total price is: " + this.price + " KRW");
+//            menu.coffeeMenu();
         }
+
     }
+    public void priceNonCoffee() {}
+    public void priceTea() {}
+    public void priceDeserts() {}
+
     public void count() {
         this.count += 1;
-        System.out.println("The count you've picked fow now is: " + count);
+        System.out.println("The count you've picked fow now is: " + count + "cup(s)");
     }
-
     //    public String getInfo () {
 //        return
 //    }
