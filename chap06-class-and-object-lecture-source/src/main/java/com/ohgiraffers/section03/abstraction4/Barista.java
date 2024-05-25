@@ -5,7 +5,11 @@ public class Barista {
      *       주문에 따라 커피를 만들어라(커피객체 반환)
      *       재고량을 관리*/
 
-    public void brewingCoffee() {}
+    Coffee coffee = new Coffee();
+
+    public void brewingCoffee() {
+//        kiosk.
+    }
 
     public void managingInventory() {}
 }
