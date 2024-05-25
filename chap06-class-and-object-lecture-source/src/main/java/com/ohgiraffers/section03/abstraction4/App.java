@@ -1,5 +1,7 @@
 package com.ohgiraffers.section03.abstraction4;
 
+import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) {
@@ -41,7 +43,24 @@ public class App {
          *       주문에 따라 커피를 만들어라(커피객체 반환)
          *       재고량을 관리
          * */
-//        Kiosk kiosk = new Kiosk();
+        Kiosk kiosk = new Kiosk();
+        Scanner scan = new Scanner(System.in);
+
+        while(true) {
+            System.out.println("==========Welcome to Euanbottle");
+            System.out.println("1. Looking into the Kiosk screen");
+            System.out.println("2. Show me the menu you've got");
+
+            int num = scan.nextInt();
+
+            switch (num) {
+                case 1:
+                    kiosk.showingMenu();
+                    break; 
+
+            }
+        }
+
 //        kiosk.menu();
 
 //        new Kiosk().menu();
