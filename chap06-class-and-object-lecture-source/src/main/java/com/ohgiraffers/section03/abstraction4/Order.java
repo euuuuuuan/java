@@ -16,18 +16,22 @@ public class Order {
     public void priceCoffee() {
         if (this.coffee1 == 3000) {
             System.out.println("You've chosen cuppa Espresso " + this.coffee1 + " KRW");
+            this.coffee1 += 3000;
 //            menu.coffeeMenu();
         } else if (this.coffee2 == 3000) {
             System.out.println("You've chosen cuppa Americano " + this.coffee2 + " KRW");
+            this.coffee2 += 3000;
 //            menu.coffeeMenu();
         } else if (this.coffee3 == 3500) {
             System.out.println("You've chosen cuppa Latte " + this.coffee3 + " KRW");
-//            menu.coffeeMenu();
-        } else {
-            this.price += this.coffee1 + this.coffee2 + this.coffee3;
-            System.out.println("The total price is: " + this.price + " KRW");
+            this.coffee3 += 3500;
 //            menu.coffeeMenu();
         }
+//        else {
+//            this.price += this.coffee1 + this.coffee2 + this.coffee3;
+//            System.out.println("The total price is: " + this.price + " KRW");
+//            menu.coffeeMenu();
+//        }
 
     }
     public void priceNonCoffee() {}
