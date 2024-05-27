@@ -42,7 +42,7 @@ public class Application {
          * 사용자 정의 자료형인 클래스를 이용하기 위해서는 new 연산자로
          * heap에 할당을 해주어야 한다.
          * 객체를 생성하게 되면 클래스에 정의한
-         * 필드와 메소드대로 객체(instance)가 생선된다.
+         * 필드와 메소드대로 객체(instance)가 생성된다.
          * 아이디, 비밀번호, 이름, 나이, 성별, 취미를 연속된 메모리 주소에서
          * 사용하도록 heap에 공간을 만들었다.
          * */
@@ -72,7 +72,7 @@ public class Application {
         member.gender = '남';
         member.hobby = new String[]{"축구", "볼링", "테니스"};
 
-        System.out.println("================= 생성한 객체 필드값 출력 :2 =================");
+        System.out.println("================= 생성한 객체 필드값 출력 : 2 =================");
         System.out.println("member id : " + member.id);
         System.out.println("member.pwd : " + member.pwd);
         System.out.println("member.name : " + member.name);
