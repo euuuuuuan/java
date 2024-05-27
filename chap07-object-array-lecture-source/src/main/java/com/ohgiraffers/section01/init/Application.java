@@ -38,11 +38,11 @@ public class Application {
 
 
         // 배열에 생성한 객체로 초기화 가능.
-        carArray[0] = new Car("페라리", 300);
-        carArray[1] = new Car("람보르기니", 350);
-        carArray[2] = new Car("롤스로이스", 250);
-        carArray[3] = new Car("부가티베이른", 400);
-        carArray[4] = new Car("포터", 500);
+        carArray[0] = new Car("페라리니", 300);
+        carArray[1] = new Car("람보르기니니", 350);
+        carArray[2] = new Car("롤스로이스니", 250);
+        carArray[3] = new Car("부가티베이른니", 400);
+        carArray[4] = new Car("포터니", 500);
 
         System.out.println("========= 객체 배열 이용 =========");
         for (int i = 0; i < carArray.length; i++) {
