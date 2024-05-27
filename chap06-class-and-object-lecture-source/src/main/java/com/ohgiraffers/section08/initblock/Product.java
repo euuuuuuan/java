@@ -29,7 +29,7 @@ public class Product {
         System.out.println("인스턴스 초기화 블럭 동작함...");
     }
 
-    // 3번의 인스턴스 초기화보다 순서가 늦어 인스턴스가 덮어씌워진다.
+    // 3번의 인스턴스 초기화보다 순서가 빨라 인스턴스가 덮어씌워진다.
     static {
         // static 초기화 블럭에서는 non-static 필드를 초기화하지 못한다.
 //        name = "아이폰";
