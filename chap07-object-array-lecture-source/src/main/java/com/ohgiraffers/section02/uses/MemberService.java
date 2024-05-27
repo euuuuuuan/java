@@ -25,6 +25,16 @@ public class MemberService {
     public void showAllMembers() {
 
         MemberFinder finder = new MemberFinder();
+        System.out.println("============ 가입된 회원 목록 ============");
 
+        // MemberFinder에서 return 받은 Member[]
+        Member[] foundMembers = finder.findAllMembers(); // 크기가 10
+
+        for (Member m : foundMembers) {
+            if (m != null) {
+                System.out.println(m.getInfo());
+            }
+        }
+        System.out.println("--------------------------------------");
     }
 }

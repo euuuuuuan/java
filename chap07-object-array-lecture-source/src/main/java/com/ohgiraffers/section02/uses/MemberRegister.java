@@ -10,7 +10,7 @@ public class MemberRegister {
         // 실제로 저장되지는 않았고, repository의 메소드를 통해
         // repository에 저장할 예정.
         for (Member m : members) {
-            System.out.println(m.getName() + "님을 회원 등록에 성공했습니다.");
+            System.out.println(m.getName() + "님을 회원 등록 하겠습니다.");
         }
 
         if (MemberRepository.store(members)) {
