@@ -1,4 +1,4 @@
-package section02.abstractclass;
+package com.ohgiraffers.section02.abstractclass;
 
 public abstract class Product {
 

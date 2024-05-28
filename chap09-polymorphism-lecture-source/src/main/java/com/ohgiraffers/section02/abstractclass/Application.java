@@ -1,4 +1,4 @@
-package section02.abstractclass;
+package com.ohgiraffers.section02.abstractclass;
 
 public class Application {
 
@@ -45,6 +45,20 @@ public class Application {
         product.abstMethod();
 
         // 추상클래스가 가진 메소드도 호출 가능
+        product.nonStaticMethod();
+
+        Product.staticMethod(); // 인스턴스 생성이 불필요
+
+        /*
+        * 추상클래스 사용하는 이유
+        * 추상클래스의 추상메소드는 오버라이딩에 대한 강제성이 부여된다.
+        * => 여러 클래스들을 그룹화해서 필수 기능을 정의해 강제성을 부여하고
+        *    개발 시 일관된 인터페이스를 제공할 수 있다.
+        *
+        * 하지만 다른 클래스를 상속받고 있는 클래스를 작성할 때는
+        * 추상 클래스를 추가로 상속이 불가능하다.
+        * => 추상클래스보다 더 강제성이 강한 인터페이스(interface)라는 메커니즘을 제공한다.
+        * */
 
     }
 }
