@@ -13,6 +13,7 @@ public class Application4 {
     public Animal getRandomAnimal(){
 
         int random = (int) (Math.random() * 2); // 0, 1
+        // Math.random()함수는 double 형으로 0.0이상 1.0 미만 사이의 값을 반환하는 함수이다.
 
         return random == 0 ? new Rabbit() : new Tiger();
     }
