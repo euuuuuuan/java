@@ -1,2 +1,5 @@
-package com.ohgiraffers.section03.interfaceimplements;public interface InterProduct {
+package com.ohgiraffers.section03.interfaceimplements;
+
+public interface InterProduct {
+    
 }
