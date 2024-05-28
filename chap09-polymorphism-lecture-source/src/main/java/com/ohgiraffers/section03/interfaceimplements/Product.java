@@ -33,8 +33,8 @@ public class Product implements InterProduct {
 //    }
 
     // default 키워드를 빼면 오버라이딩이 가능하다.
-//    @Override
-//    public void defaultMethod() {
-//        System.out.println("Product 클래스의 defaultMethod 호출됨...");
-//    }
+    @Override
+    public void defaultMethod() {
+        System.out.println("Product 클래스의 defaultMethod 호출됨...");
+    }
 }
