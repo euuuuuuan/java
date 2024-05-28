@@ -1,4 +1,4 @@
-package section02.abstractclass;
+package com.ohgiraffers.section02.abstractclass;
 
 // java에서는 단일 상속만 가능하다.
 public class SmartPhone extends Product/*,java.util.Scanner*/{
