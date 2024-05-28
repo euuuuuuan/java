@@ -17,5 +17,9 @@ public class Application {
         * 1. 추상클래스와 비슷하게 필요한 기능을 공통화해서 강제성을 부여할 목적으로 사용한다.(표준화)
         * 2. 자바의 단일상속의 단점을 극복할 수 있다. (다중 상속)
         * */
+
+//        인스턴스를 직접 생성하지 못하고 생성자 자체가 존재하지 않는다.
+//        InterProduct interProduct = new InterProduct();
+        InterProduct interProduct = new Product();
     }
 }
