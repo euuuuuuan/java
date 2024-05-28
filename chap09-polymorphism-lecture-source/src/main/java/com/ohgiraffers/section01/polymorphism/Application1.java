@@ -1,4 +1,4 @@
-package section01.polymorphism;
+package com.ohgiraffers.section01.polymorphism;
 
 public class Application1 {
 
@@ -105,6 +105,7 @@ public class Application1 {
         * */
 
         // 묵시적 형변환 -> up-casting의 경우 적용됨.
+        // Rabbit 값이 Animal 클라스에 입력이 됨.
         Animal animal1 = (Animal) new Rabbit(); // up-casting 명시적 형변환
         Animal animal2 = new Rabbit(); // up-casting 묵시적 형변환
 
