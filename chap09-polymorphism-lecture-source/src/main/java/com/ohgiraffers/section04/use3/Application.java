@@ -5,7 +5,7 @@ public class Application {
 
         Dice dice = new HellDice(); // SuperDice로 변경해도 작동하게 만들기
 
-        Dicer dicer = new Dicer();
+        Dicer dicer = new Dicer(dice);
 
         dicer.throwDice(dice);
 

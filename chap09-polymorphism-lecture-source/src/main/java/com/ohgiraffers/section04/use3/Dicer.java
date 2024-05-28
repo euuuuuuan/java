@@ -10,7 +10,7 @@ public class Dicer {
 
     public void throwDice(Dice dice) {
 
-        int diceNum = dice.getNumber();
+        int data = dice.getNumber();
 
         dice.getNumber();
 
