@@ -1,5 +1,8 @@
 package com.ohgiraffers.api.string;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class StringProcess {
     public String preChar(String helloWorld) {
 
@@ -12,9 +15,28 @@ public class StringProcess {
 
     public int charSu(String s, char ch) {
 
-//        String s =
+        int count = s.length() - s.replace("c", "").length();
         
-        return 0;
+        return count;
+
+//        String num = "application car cable";
+//        System.out.println(s.indexOf("s")); // 문자열 탐색
+//        System.out.println(s.indexOf("ch")); //문자 탐색
+//        int test = s.indexOf("kkk");//해당 문자열이 없을 경우 -1 반환
+//        System.out.println(test);
+        //        System.out.println(s.contains("s"));
+//        System.out.println(s.contains("c"));
+//        System.out.println(s.indexOf("c")); //문자 탐색
+
+        /*public static int runTest(String regex, String text) {
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(text);
+            int matches = 0;
+            while (matcher.find()) {
+                matches++;
+            }
+            return matches;
+        }*/
 
         // int 문자열에서 찾는 문자가 몇개 포함되어 있는지 반환하는 메서드 작성
 
