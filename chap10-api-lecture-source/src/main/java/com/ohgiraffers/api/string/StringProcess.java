@@ -16,7 +16,7 @@ public class StringProcess {
     public int charSu(String s, char ch) {
 
         int count = s.length() - s.replace("c", "").length();
-        
+
         return count;
 
 //        String num = "application car cable";
