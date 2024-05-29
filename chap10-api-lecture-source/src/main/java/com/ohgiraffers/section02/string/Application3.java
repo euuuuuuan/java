@@ -39,6 +39,13 @@ public class Application3 {
             System.out.println("empArr3[" + i + "] : " + empArr3[i]);
         }
 
+        System.out.println();
+        System.out.println("============= empArr4 ============="); // 마지막값이 빈 문자열, 출력
+        String[] empArr4 = emp3.split(",", -1);
+        for (int i = 0; i < empArr4.length; i++) {
+            System.out.println("empArr4[" + i + "] : " + empArr4[i]);
+        }
+
     }
 
 }
