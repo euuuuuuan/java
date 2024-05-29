@@ -26,5 +26,12 @@ public class Application1 {
         System.out.println("book2 = " + book2);
         System.out.println("book3 = " + book3);
         // book1 뒤에는 book1.toString이 사용되고 있음
+
+        System.out.println();
+        System.out.println("============ toString 오버라이딩 이후 ============");
+        System.out.println("book1 = " + book1);
+        System.out.println("book2 = " + book2);
+        System.out.println("book3 = " + book3);
+
     }
 }
