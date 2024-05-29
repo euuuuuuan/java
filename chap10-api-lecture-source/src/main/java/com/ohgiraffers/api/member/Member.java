@@ -1,2 +1,4 @@
-package com.ohgiraffers.api.member;public class Member {
+package com.ohgiraffers.api.member;
+
+public class Member {
 }
