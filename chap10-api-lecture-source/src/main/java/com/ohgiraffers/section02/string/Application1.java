@@ -13,6 +13,7 @@ public class Application1 {
         for (int i = 0; i < str1.length(); i++) {
             System.out.println("charAt(" + i + ") = " + str1.charAt(i));
         }
+
         /*
         * compareTo() : 인자로 전달된 문자열과 사전 순으로 비교하여
         * 두 문자열이 같다면 0을 반환하고 인자로 전달된 문자열보다 작으면 음수를,
