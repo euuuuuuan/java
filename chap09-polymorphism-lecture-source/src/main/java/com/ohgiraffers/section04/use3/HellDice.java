@@ -3,7 +3,7 @@ package com.ohgiraffers.section04.use3;
 public class HellDice implements Dice{
 
     @Override
-    public int getNumber(int dice) {
+    public int getNumber() {
         return 4;
     }
 }
