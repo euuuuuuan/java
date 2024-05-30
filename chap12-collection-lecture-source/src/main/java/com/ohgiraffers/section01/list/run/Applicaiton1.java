@@ -1,9 +1,7 @@
 package com.ohgiraffers.section01.list.run;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Applicaiton1 {
     public static void main(String[] args) {
@@ -70,5 +68,78 @@ public class Applicaiton1 {
 
         // toString 메소드가 오버라이딩 되어 있음.
         System.out.println("list: " + list);
+
+        // arrayList의 크기는 size() 확인할 수 있다.
+        // size()는 요소의 개수를 반환한다
+        System.out.println("list의 size:  " + list.size());
+
+        // 인덱스가 지정되어 있기 때문에 for문으로 접근 가능
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(i + " : " + list.get(i));
+        }
+
+        // arrayList는 데이터의 중복저장을 허용한다.
+        list.add("apple");
+        System.out.println("list = " + list);
+
+        /*
+        * 원하는 인덱스 위치에 갚을 추가할 수 있다.
+        * 새로운 값이 들어가는 인덱스 위치에 값을 넣고,
+        * 이후 인덱스는 하나씩 뒤로 밀리게 된다.
+        * */
+        list.add(1, "banana");
+        System.out.println("list = " + list);
+        
+        /*
+        * 저장된 값을 삭제할 때는 remove() 메소드를 사용한다.
+        * 중간 인덱스의 값을 삭제할 때 자동으로 인덱스를 하나씩 앞당긴다.
+        * */
+        list.remove(2);
+        System.out.println("list = " + list);
+        
+        // 모든 컬렉션 프레임워크 클래스는 제네릭 클래스로 작성되어 있다.
+        List<String> stringList = new ArrayList<>();
+        // 타입을 지정해서 타입 이외의 인스턴스는 저장하지 않을 수 있다.
+        // stringList.add(123);
+        stringList.add("apple");
+        stringList.add("banana");
+        stringList.add("orange");
+        stringList.add("mango");
+        stringList.add("grape");
+        System.out.println("stringList = " + stringList);
+
+        /*
+        * sort 정렬
+        * Collection -> Interface -> 바로 사용 불가
+        * -> Collection 사용되는 기능을 static 메소드로 구현한 클래스
+        * */
+        Collections.sort(stringList);
+//        Collections.reverse(stringList);
+
+        System.out.println("stringList = " + stringList);
+
+        /*
+        * ArrayList에는 역순으로 정렬하는 기능이 제공되지 않는다.
+        * LinkedList decendingIterator() 메소드를 사용하면
+        * 내림차순으로 정렬된 Iterator 타입의 목록으로 반환된다.
+        * */
+
+        /*
+        * Iterator
+        * Collection 인터페이스의 iterator() 메소드를 이용해서 인스턴스를 생성할 수 있다.
+        * 컬렉션에서 값을 읽어오는 방식을 통일되게 제공하기 위해서 사용
+        *
+        * hashNext() : 다음 요소를 가지고 있는 경우 true, 더이상 요소가 없는 경우 false를 반환
+        * next() : 다음 요소를 반환
+        * */
+
+        stringList = new LinkedList<>(stringList);
+        Iterator<String> dIter = ((LinkedList<String>)stringList).descendingIterator();
+        List<String> descList = new ArrayList<>();
+
+        while (dIter.hasNext()) {
+            descList.add(dIter.next());
+        }
+        System.out.println("descList = " + descList);
     }
 }
