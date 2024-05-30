@@ -27,6 +27,7 @@ public class Run {
 //        String[] secondSplitArr2 = firstSplitArr[2].split(",");
 //        System.out.println("secondSplitArr[0] = " + Arrays.toString(secondSplitArr2));
 
+        System.out.println("========== 멤버 객체 배열 ==========");
         // 멤버 객체 배열
         Member[] members = new Member[firstSplitArr.length];
 
