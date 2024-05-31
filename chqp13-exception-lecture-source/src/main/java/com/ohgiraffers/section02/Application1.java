@@ -13,9 +13,10 @@ public class Application1 {
         ExceptionTest et = new ExceptionTest();
 
         try {
-            et.checkEnoughMoney(10000, 5000);
+            et.checkEnoughMoney(-10000, 5000);
         } catch (Exception e) {
-            e.printStackTrace();
+            // Exception 출력 - 로그를 남기는 것
+             e.printStackTrace();
         }
     }
 }
