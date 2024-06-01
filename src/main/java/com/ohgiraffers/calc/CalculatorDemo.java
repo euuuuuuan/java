@@ -5,10 +5,10 @@ public class CalculatorDemo {
         Calculator calc = new Calculator();
         calc.setOprands(new int[]{10,20});
         calc.sum();
-        calc.avg();
-
-        calc.setOprands(new int[]{10,20,30});
-        calc.sum();
-        calc.avg();
+//        calc.avg();
+//
+//        calc.setOprands(new int[]{10,20,30});
+//        calc.sum();
+//        calc.avg();
     }
 }
