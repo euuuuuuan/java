@@ -34,7 +34,7 @@ public class Application {
             System.out.println(i.toString());
         }
 
-        EmployeeDTO[] work = new EmployeeDTO[1];
+        EmployeeDTO[] work = new EmployeeDTO[10];
 
         Scanner sc = new Scanner(System.in);
 
@@ -45,8 +45,8 @@ public class Application {
 //        int[] salary = new int[work];
 //        String[] dept = new String[work];
 
-        int count = 0;
-        while (true) {
+        int count = 0; // 입력받을 값 0으로 초기화
+        while (true) { // while문으로 배열 안에 여러 값 입력받기
 
             System.out.println("이름을 입력하세요. \n");
             String name = sc.next();
@@ -74,21 +74,21 @@ public class Application {
 //            EmployeeDTO em = new EmployeeDTO(name, age, height, weight, salary, dept);
 //            work[count] = em;
             work[count] = new EmployeeDTO(name, age, height, weight, salary, dept);
-            count++;
+            count++; // 값 입력 후 카운트 증가 연산자 적용
 
             System.out.println("계속 입력하시겠습니까? (Y/N)");
             char ch = sc.next().charAt(0);
-            if (ch == 'y' || ch == 'Y') {
+            if (ch == 'y' || ch == 'Y') { // 대소문자 구분 없이 입력받기
                 continue;
-            } else if (ch == 'n' || ch == 'N') {
+            } else if (ch == 'n' || ch == 'N') {  // if문 y일시 건너뛰고, n일시 종료
                 System.out.println("프로그램을 종료합니다.");
                 break;
             }
-            System.out.println(count + "명 입력되었습니다.");
+            System.out.println(count + "명 입력되었습니다."); // 최종 누적 카운트 출력
 
             for(int i = 0; i < count; i++){
-            System.out.println(work[i].toString());
-            }
+            System.out.println(work[i].toString()); // EmployeeDTO[] work = new EmployeeDTO[1];
+            } // 입력된 정보 출력하기
 
         }
 
