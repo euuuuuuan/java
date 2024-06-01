@@ -34,7 +34,7 @@ public class Application {
             System.out.println(i.toString());
         }
 
-        EmployeeDTO[] work = new EmployeeDTO[10];
+        EmployeeDTO[] work = new EmployeeDTO[1];
 
         Scanner sc = new Scanner(System.in);
 
@@ -71,15 +71,13 @@ public class Application {
             System.out.println("부서를 입력하세요. \n");
             String dept = sc.next();
 
-            EmployeeDTO em = new EmployeeDTO(name, age, height, weight, salary, dept);
-            work[count] = em;
-//            work[] = new EmployeeDTO(name, age, height, weight, salary, dept);
+//            EmployeeDTO em = new EmployeeDTO(name, age, height, weight, salary, dept);
+//            work[count] = em;
+            work[count] = new EmployeeDTO(name, age, height, weight, salary, dept);
             count++;
-
 
             System.out.println("계속 입력하시겠습니까? (Y/N)");
             char ch = sc.next().charAt(0);
-// yes
             if (ch == 'y' || ch == 'Y') {
                 continue;
             } else if (ch == 'n' || ch == 'N') {
@@ -88,28 +86,13 @@ public class Application {
             }
             System.out.println(count + "명 입력되었습니다.");
 
-            for(int i = 0; i < count; count++);
-            System.out.println();
-//            String yes = sc.nextLine();
-//            switch (yes) {
-//                case "y":
-//                    System.out.println();
-//                    break;
-//                case "Y":
-//                    System.out.println();
-//                    break;
-//                default:
-//                    System.out.println("default");
-//                    break;
-//            }
+            for(int i = 0; i < count; i++){
+            System.out.println(work[i].toString());
+            }
 
         }
 
     }
-
-
-
-
 
 
 // 2명 정도의 사원 정보를 입력 받아 객체 배열에 저장
