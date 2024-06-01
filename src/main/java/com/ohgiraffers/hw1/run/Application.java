@@ -34,7 +34,7 @@ public class Application {
             System.out.println(i.toString());
         }
 
-        EmployeeDTO[] work = new EmployeeDTO[10];
+        EmployeeDTO[] work = new EmployeeDTO[2];
 
         Scanner sc = new Scanner(System.in);
 
@@ -73,9 +73,13 @@ public class Application {
 
 //            EmployeeDTO em = new EmployeeDTO(name, age, height, weight, salary, dept);
 //            work[count] = em;
-            work[count] = new EmployeeDTO(name, age, height, weight, salary, dept);
-            count++; // 값 입력 후 카운트 증가 연산자 적용
-
+            try {
+                work[count] = new EmployeeDTO(name, age, height, weight, salary, dept);
+                count++; // 값 입력 후 카운트 증가 연산자 적용
+            } catch (Exception e) {
+                System.out.println("입력가능한 인원을 초과하였습니다.");
+                break;
+            }
             System.out.println("계속 입력하시겠습니까? (Y/N)");
             char ch = sc.next().charAt(0);
             if (ch == 'y' || ch == 'Y') { // 대소문자 구분 없이 입력받기
@@ -84,13 +88,14 @@ public class Application {
                 System.out.println("프로그램을 종료합니다.");
                 break;
             }
+        }
             System.out.println(count + "명 입력되었습니다."); // 최종 누적 카운트 출력
 
             for(int i = 0; i < count; i++){
             System.out.println(work[i].toString()); // EmployeeDTO[] work = new EmployeeDTO[1];
             } // 입력된 정보 출력하기
 
-        }
+
 
     }
 
