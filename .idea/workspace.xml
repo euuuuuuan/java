@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="085406dd-a25f-4636-a849-2ba87bcb6f02" name="Changes" comment="" />
+    <list default="true" id="085406dd-a25f-4636-a849-2ba87bcb6f02" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/github_token.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,21 +15,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "euuuuuuan"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;euuuuuuan&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/euuuuuuan/01_Java.git",
-    "accountId": "375e9848-5764-40cb-9ea0-d6341916568a"
+    "accountId": "e0c99540-7888-467a-8a3e-adc2c55d67ac"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2gR5ZDGZ8T3RGoe3HNq1WZQdhEN" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -37,7 +39,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/80404/Desktop/test/01_java/chap01-literal-and-variable-lecture-source",
+    "last_opened_file_path": "C:/Users/80410/Desktop/Euan/01_Java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,6 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715647602343</updated>
       <workItem from="1715647603461" duration="689000" />
+      <workItem from="1716424443448" duration="147000" />
     </task>
     <servers />
   </component>
