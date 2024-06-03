@@ -7,5 +7,18 @@ public class Application {
         UserRole1 admin = UserRole1.ADMIN;
         System.out.println(admin);
         System.out.println(admin.getNameToLowerCase());
+
+        // 최초로 enum 타입을 사용할 때 생성자가 호출된다.
+        UserRole2 consumer = UserRole2.CONSUMER;
+
+        /*
+        * ordinal() : 작성된 순으로 생성되는 고유 번호 반환
+        * name() : 작성된 상수 이름을 문자열로 반환
+        * */
+
+        System.out.println("consumer.ordinal() = " + consumer.ordinal());
+        System.out.println("consumer.name() = " + consumer.name());
+        System.out.println("consumer.getDescription() = " + consumer.getDescription());
+
     }
 }
