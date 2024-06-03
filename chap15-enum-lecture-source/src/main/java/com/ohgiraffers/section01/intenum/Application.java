@@ -32,14 +32,36 @@ public class Application {
         String subjectText = "";
 
         switch (num) {
-//            case Subjects.JAVA -> // JAVA쓰고 엔터누르면 -> 문은 무엇인가
-
 //            case Subjects.JAVA: subjectText = "JAVA"; break;
 //            case Subjects.JDBC: subjectText = "JDBC"; break;
 //            case Subjects.ORACLE: subjectText = "ORACLE"; break;
-            
+
         }
 
         System.out.println("subjectText : " + subjectText);
+
+        // 3. 타입 안전을 보장할 수 없다.
+        printSubject(Subjects.JAVASCRIPT);
+//        printSubject(5);
+
+    }
+    // switch문을 int를 매개변수로 입력받고
+    // return은 없고, 과목명을 출력하는 메소드
+    // public static, printSubject() {}
+
+    public static void printSubject(int subjectNumber) {
+        String subjectName = "";
+        switch (subjectNumber) {
+            case Subjects.JAVA:
+                subjectName = "JAVA";
+                break;
+            case Subjects.JDBC:
+                subjectName = "JDBC";
+                break;
+            case Subjects.ORACLE:
+                subjectName = "ORACLE";
+                break;
+        }
+        System.out.println("subject : " + subjectName);
     }
 }
