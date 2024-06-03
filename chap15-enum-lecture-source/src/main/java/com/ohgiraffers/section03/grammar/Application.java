@@ -1,5 +1,8 @@
 package com.ohgiraffers.section03.grammar;
 
+import java.util.EnumSet;
+import java.util.Iterator;
+
 public class Application {
     // Enum 문법
     public static void main(String[] args) {
@@ -20,5 +23,16 @@ public class Application {
         System.out.println("consumer.name() = " + consumer.name());
         System.out.println("consumer.getDescription() = " + consumer.getDescription());
 
+        System.out.println("=================================");
+
+        // EnumSet을 활용해 여러 열거형 타입들을 set으로 취급할 수 있다.
+        EnumSet<UserRole2> roles = EnumSet.allOf(UserRole2.class);
+
+        Iterator<UserRole2> iter = roles.iterator();
+        while (iter.hasNext()) {
+            System.out.println(iter.next().name());
+//            System.out.println(iter.next().ordinal());
+//            System.out.println(iter.next().getDescription());
+        }
     }
 }
