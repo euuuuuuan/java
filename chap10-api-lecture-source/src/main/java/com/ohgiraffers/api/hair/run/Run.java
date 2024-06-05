@@ -135,6 +135,8 @@ public class Run {
                     LocalDate.parse(userInfo[5], DateTimeFormatter.ofPattern("yyyy/MM/dd")) :
                     null;
             // 사용자의 생년월일을 파싱. 문자열이 비어 있지 않으면 지정된 형식의 날짜로 파싱하고, 비어 있으면 null 값을 사용.
+            // "".equals(userInfo[5])는 userInfo[5]가 빈 문자열인지 여부를 검사. 즉, 생년월일이 빈 문자열인지 확인.
+            //그런데 ! 연산자를 사용하여 이를 부정하고 있다. 따라서 !"".equals(userInfo[5])는 생년월일이 빈 문자열이 아닌지를 확인하는 것.
 
             LocalDate reservationDate = LocalDate.parse(userInfo[6]);
             // 예약 일자를 파싱합니다. 날짜 형식이 이미 정해져 있기 때문에 별도의 형식 지정이 필요하지 않다.
