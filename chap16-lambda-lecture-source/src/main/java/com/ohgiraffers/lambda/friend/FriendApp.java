@@ -28,8 +28,6 @@ public class FriendApp {
             }
         });
 
-
-
         // 2. 다음 map에서 key값이 홀수인 value만 출력하세요. (map의 forEach메소드 사용할 것.)
         Map<Integer, Friend> map = Map.of(
                 1, new Friend("홍길동", 30),
