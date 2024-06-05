@@ -9,7 +9,7 @@ public class LibraryMenu {
     Scanner sc = new Scanner(System.in);
 
     public void mainMenu() {
-        
+
     }
 
     public void selectAll() {}
