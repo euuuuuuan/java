@@ -146,7 +146,7 @@ public class Run {
             // 대부분의 경우에는 "HH:mm" 형식을 사용하는 것이 더 적절.
 
             LocalDateTime createdAt = LocalDateTime.parse(userInfo[8]);
-            // 데이터베이스에 기록된 생성 시간을 파.
+            // 데이터베이스에 기록된 생성 시간을 파싱.
 
             users[i] = new Customer(id, firstName, lastName, email, gender, birthDate, reservationDate, reservationTime, createdAt);
             // 파싱한 사용자 정보를 사용하여 Customer 객체를 생성하고 배열에 할당.
