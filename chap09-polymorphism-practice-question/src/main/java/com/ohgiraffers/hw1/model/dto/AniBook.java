@@ -1,6 +1,6 @@
 package com.ohgiraffers.hw1.model.dto;
 
-public class AniBook {
+public class AniBook extends Book {
     private int accessAge;
 
     public AniBook(){}

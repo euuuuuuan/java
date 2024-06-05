@@ -1,6 +1,6 @@
 package com.ohgiraffers.hw1.model.dto;
 
-public class CookBook {
+public class CookBook extends Book {
     boolean coupon;
 
     public CookBook() {}
