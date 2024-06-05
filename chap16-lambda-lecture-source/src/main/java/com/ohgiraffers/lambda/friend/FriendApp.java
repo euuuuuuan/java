@@ -16,6 +16,18 @@ public class FriendApp {
                 new Friend("세종대왕", 54),
                 new Friend("간달프", 105)
         );
+        /*
+         * forEach()
+         *
+         * 컬렉션에 들어있는 기능으로, Iterator를 이용해 구현되어 있다.
+         * 목록의 요소를 반복하고, 특정 작업을 수행하는 간결한 방법을 제공한다.
+         * */
+        list.forEach(friend -> {
+            if (friend.getAge() >= 40) {
+                System.out.println(friend);
+            }
+        });
+
 
 
         // 2. 다음 map에서 key값이 홀수인 value만 출력하세요. (map의 forEach메소드 사용할 것.)
@@ -26,6 +38,13 @@ public class FriendApp {
                 4, new Friend("세종대왕", 54),
                 5, new Friend("간달프", 105)
         );
+
+        map.forEach((k, v) -> { // key = k, value = v
+            // 홀수 판별
+            if (k % 2 != 0) {
+                System.out.println(v);
+            }
+        });
 
 //        forEach(list, /* 메소드 참조 */ System.out::println);
 //        forEach(map, /* 메소드 참조 */ System.out::println);
@@ -45,5 +64,5 @@ public class FriendApp {
 //        }
 
     }
-}
+//}
 

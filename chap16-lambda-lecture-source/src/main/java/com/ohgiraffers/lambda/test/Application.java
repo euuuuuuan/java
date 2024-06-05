@@ -4,23 +4,22 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.IntConsumer;
-import java.util.function.IntSupplier;
+import java.util.*;
+import java.util.function.*;
 
 public class Application {
     public static void main(String[] args) {
         Application app = new Application();
         app.test1();
+//        app.test1_General();
         app.test2();
+//        app.test2_General();
         app.test3();
+//        app.test3_General();
         app.test4();
+//        app.test4_1();
         app.test5();
+//        app.test5_General();
     }
 
     /**
@@ -42,8 +41,37 @@ public class Application {
             System.out.println(formattedTime);
         };
         consumer.accept(LocalTime.now());
-
     }
+//    private void test1() {
+//
+//        // 방법 1 Runnable
+//        Runnable now = () -> {
+//            System.out.println(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+//        };
+//        now.run();
+//
+//        // 방법 2 Consumer
+//        Consumer<LocalTime> now2 = (time) -> {
+//            System.out.println(time.format(DateTimeFormatter.ofPattern("HH:mm:ss")));
+//        };
+//        now2.accept(LocalTime.now());
+//
+//    }
+//
+//    private void test1_General() {
+//
+//        //LocalTime.now() OS에 보이는 현재 시간을 반환해주는 기능
+//        LocalTime localTime = LocalTime.now();
+//        System.out.println(localTime); // 09:39:58.792516100
+//
+//        System.out.println(localTime.format(DateTimeFormatter.ofPattern("HH:mm:ss")));//09:41:48
+//
+//        // 매개변수도 필요없음
+//        // 리턴도 필요없음
+//        // Runnable
+//        // Consumer
+//    }
+
 
     /**
      * <pre>
@@ -81,6 +109,46 @@ public class Application {
         */
     }
 
+//    private void test2() {
+//
+//        Supplier<Set<Integer>> lotto = () -> {
+//            Set<Integer> set = new TreeSet<>();
+//            while (set.size() < 6) {
+//                set.add((int) (Math.random() * 45) + 1);
+//            }
+//
+//            return set;
+//        };
+//
+//        Set<Integer> lottoResult = lotto.get();
+//
+//        System.out.println("lottoResult = " + lottoResult);
+//
+//    }
+//
+//    private void test2_General() {
+//
+//        /*
+//         * Set 특징 : 중복저장이 허용되지 않음
+//         * TreeSet 특징 : 자동 정렬
+//         * 컬렉션 -> 컬렉션에서 다룰 수 있는 데이터는 기본적으로 객체만 가능 -> Integer를 사용한 이유
+//         * */
+//        Set<Integer> lotto = new TreeSet<>();
+//
+//        // 숫자 6개
+////        int num = ((int)(Math.random()*45) + 1);
+////        System.out.println(num);
+//
+//        // 반복문
+//        while (lotto.size() < 6) {
+//            lotto.add((int) (Math.random() * 45) + 1);
+//        }
+//
+//        System.out.println("lotto = " + lotto);
+//
+//    }
+
+
     /**
      * <pre>
      * @실습문제3
@@ -90,9 +158,36 @@ public class Application {
      */
     // * Consumer : 리턴값이 없는 accept() 메소드를 가지고 있다. (매개변수 소비자 역할)
     private void test3() {
-        IntConsumer intConsumer = (num) -> System.out.println("입력하신 원화(￦)의 달러(＄)는 " + ((float) num / 1300 + "＄") + " 입니다");
+        IntConsumer intConsumer = num -> System.out.println("입력하신 원화(￦)의 달러(＄)는 " + ((float) num / 1300 + "＄") + " 입니다");
         intConsumer.accept(1500);
     }
+
+//    private void test3() {
+//
+//        Consumer<Integer> calc = won -> {
+//            double rate = 1300;
+//            double dollar = won / rate;
+//            System.out.println("￦" + won + " =>  ＄ " + dollar);
+//        };
+//
+//        calc.accept(3000);
+//    }
+//
+//    private void test3_General() {
+//
+//        // 입력받을 값
+//        int won = 3000;
+//
+//        // 환율
+//        double rate = 1300;
+//
+//        // 달러로 환산
+//        double dollar = won / rate;
+//
+//        // 출력
+//        System.out.println("￦" + won + " =>  ＄ " + dollar);
+//
+//    }
 
     /**
      * <pre>
@@ -102,9 +197,38 @@ public class Application {
      */
     // * Function : 매개변수와 리턴값이 있는 applyXXX() 메소드를 가지고 있다. (매개변수를 리턴값으로 매핑)
     private void test4() {
-        Function<Integer, String> converter = (num) -> "입력하신 원화(￦)의 달러(＄)는 " + ((float) num / 1300) + "＄ 입니다";
+        Function<Integer, String> converter = num -> "입력하신 원화(￦)의 달러(＄)는 " + ((float) num / 1300) + "＄ 입니다";
         System.out.println(converter.apply(1500));
     }
+//    private void test4() {
+//
+//        Function<Integer, Double> calc = won -> {
+//            double rate = 1300;
+//            return won / rate;
+//        };
+//
+//        double dollar = calc.apply(3000);
+//        System.out.println(dollar);
+//    }
+//
+//    /**
+//     * <pre>
+//     * @실습문제4 -1
+//     * 위 문제를 jdk가 제공하는 BiFunction 함수형인터페이스 형식에 맞게 변형하세요.
+//     * 원화, 환율을 입력받아 변환된 달러를 리턴해도록 만드세요
+//     * </pre>
+//     */
+//    public void test4_1() {
+//
+//        BiFunction<Integer, Double, Double> calc = (won, rate) -> {
+//
+//            return won / rate;
+//        };
+//
+//        double dollar = calc.apply(3000, 1300.0);
+//        System.out.println("dollar = " + dollar);
+//    }
+
     /*람다 표현식인 (num) -> "입력하신 원화(￦)의 달러(＄)는 " + ((float)num / 1300) + "＄ 입니다"가 반환하는 함수
      * 입력값은 apply 메서드에 전달된 인수인 1500
      * 출력값은 converter 함수에 의해 반환된 문자열
@@ -142,7 +266,6 @@ public class Application {
     변환된 결과를 반환합니다.
     이를 System.out.println()을 사용하여 콘솔에 출력하면 변환된 결과를 확인할 수 있습니다.*/
 
-
     /**
      * <pre>
      * @실습문제5
@@ -150,6 +273,7 @@ public class Application {
      * 문자열리스트 {"abc","","대한민국","   "}를 체크하세요.
      * </pre>
      */
+
     private void test5() {
         List<String> strList = Arrays.asList("abc", "", "대한민국", "   ");
         for (String str : strList) {
@@ -165,7 +289,24 @@ public class Application {
         trim() 메소드를 호출하여 문자열의 앞뒤 공백을 제거하였습니다.
         공백이 있는 문자열도, 공백으로 체크되어 true를 리턴하는 것을 확인할 수 있습니다.
         */
-
     }
+//    private void test5() {
+//        List<String> strList = Arrays.asList("abc", "", "대한민국", "   ");
+//
+//        Predicate<String> isLengthZero = str -> str.trim().length() == 0;
+//
+//        for (String str : strList) {
+//            System.out.println("[" + str + "]의 길이는 0입니까? " + isLengthZero.test(str));
+//        }
+//    }
+
+//    public void test5_General() {
+//
+//        // List를 만드는 방법 1
+//        List<String> strList1 = new ArrayList<>();
+//        strList1.add("abc");
+//        strList1.add("");
+//        strList1.add("대한민국");
+//        strList1.add("    ");
 }
 
