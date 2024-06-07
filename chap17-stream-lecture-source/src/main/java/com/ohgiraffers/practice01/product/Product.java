@@ -5,6 +5,7 @@ public class Product {
     private String brand;
     private String category;
     private int price;
+    private double dicount;
 
     public Product() {
     }
@@ -39,21 +40,25 @@ public class Product {
         this.category = category;
     }
 
-    public int getPrice(double discountRate) {
-        return (int) (this.price * (Math.abs(0 - discountRate)));
+    public int getPrice() {
+        return price;
     }
 
     public void setPrice(int price) {
         this.price = price;
     }
 
+    public int getDiscount(double discountRate) {
+        return (int) (this.price * (Math.abs(0 - discountRate)));
+    }
+
     @Override
     public String toString() {
-        return "Product{" +
+        return "Product = [" +
                 "productName='" + productName + '\'' +
                 ", brand='" + brand + '\'' +
                 ", category='" + category + '\'' +
                 ", price=" + price +
-                '}';
+                ']';
     }
 }
