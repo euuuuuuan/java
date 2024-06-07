@@ -16,7 +16,6 @@ public class Application3 {
                 .boxed() // Integer 형태로 변환
                 .sorted() // 오름차순 정렬
                 .toList(); // 리스트 형태로 반환(return)
-        // 이미 리스트 타입인데 굳이 박스드하고 투리스트 할 이유가 있는가
 
         System.out.println("integerList = " + integerList);
     }

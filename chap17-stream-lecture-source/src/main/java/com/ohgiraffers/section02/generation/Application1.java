@@ -19,7 +19,6 @@ public class Application1 {
         Stream<String> strStream2 = Arrays.stream(sarr, 0, 2);
         strStream2.forEach(System.out::println);
 
-
         System.out.println();
         System.out.println("================== List를 스트림으로 변환 ==================");
         // Arrays.asList로 만들 때는 add remove가 되지 않는다. (불변 객체)
