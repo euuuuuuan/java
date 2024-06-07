@@ -5,7 +5,6 @@ public class Product {
     private String brand;
     private String category;
     private int price;
-    private double dicount;
 
     public Product() {
     }
