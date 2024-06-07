@@ -5,6 +5,7 @@ import com.ohgiraffers.practice01.product.Product;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class App {
@@ -25,7 +26,6 @@ public class App {
         );
         // 문제별 메소드를 만들어서 작성하세요.
 
-        // 1. 전자기기류만 모두 출력하세요.
         System.out.println("1. 전자기기류만 모두 출력하세요.");
         System.out.println();
         list.stream()
@@ -34,20 +34,17 @@ public class App {
 
         System.out.println();
 
-        // 2. apple사가 전제품 10% 할인한다고 할때, 해당제품명과 할인된 가격을 출력하세요.
         System.out.println("2. apple사가 전제품 10% 할인한다고 할때, 해당제품명과 할인된 가격을 출력하세요.");
         System.out.println();
         list.stream()
                 .filter(product -> product.getBrand().equals("apple")) // boolean으로 하기 intermediate의 filter
                 .map(product -> {
-                    int getPrice = product.getPrice(0.1);
-                    return product.getProductName() + "의 할인된 가격: " + getPrice + "원";
+                    int getDiscount = product.getDiscount(0.1);
+                    return product.getProductName() + "의 할인된 가격: " + getDiscount + "원";
                 })
                 .forEach(System.out::println);
 
         System.out.println();
-        // 3. 디초코 상표명이 "dechocolatecoffee"로 변경되었다.
-        //	        스트림상에서 디초코 상품들의 상표명을 "dechocolatecoffee"로 변경하고 출력하세요.
         System.out.println("3. 디초코 상표명이 \"dechocolatecoffee\"로 변경되었다.\n" +
                 "\t스트림상에서 디초코 상품들의 상표명을 \"dechocolatecoffee\"로 변경하고 출력하세요.");
         System.out.println();
@@ -58,14 +55,29 @@ public class App {
                     return product;
                 })
                 .forEach(System.out::println);
-
         // 스트림을 사용하여 디초코 상품들을 필터링합니다.
         // 각 상품의 상표명을 "dechocolatecoffee"로 변경합니다.
         // 변경된 상표명을 출력합니다.
 
-        // 4. 금액이 십만원 이상인 상품을 따로 list로 생성하고 출력하세요.
+        System.out.println();
+        System.out.println("4. 금액이 십만원 이상인 상품을 따로 list로 생성하고 출력하세요.");
+        System.out.println();
+        list.stream()
+                .filter(product -> product.getPrice() >= 100000)
+                .forEach(System.out::println);
 
+        System.out.println();
+        // 금액이 십만원 이상인 상품을 따로 리스트로 생성하고 출력
+        // 이렇게 하면 스트림의 결과를 다시 사용할 수 있고, 필요한 경우에만 사용할 수 있다.
+        List<Product> expensiveProducts = list.stream()
+                .filter(product -> product.getPrice() >= 100000) // 금액이 십만원 이상인 상품 필터링
+                .toList(); // 필터링된 상품들을 새로운 리스트로 수집
 
+        // 새로운 리스트 출력
+        expensiveProducts.forEach(System.out::println);
 
+        // 스트림을 사용하여 상품들을 필터링합니다. 이때 금액이 십만원 이상인 상품만 필터링합니다.
+        // 필터링된 상품들을 새로운 리스트에 수집합니다.
+        // 새로운 리스트를 출력합니다.
     }
 }
