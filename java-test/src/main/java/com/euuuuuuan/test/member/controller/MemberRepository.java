@@ -23,8 +23,6 @@ public class MemberRepository {
     }
 
     public void printData() {
-        System.out.println("=========================== 회원 포인트 적립 정보 ===========================");
-        System.out.println("=========================== 회원 물품 금액 정보 ===========================");
 
     }
 }

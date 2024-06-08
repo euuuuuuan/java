@@ -36,8 +36,7 @@ abstract class Member {
         this.point = point;
     }
 
-    public double calculateInterest() {
-        return point * 0.2;
-    }
+    // 추상 메소드로 변경
+    public abstract double calculateInterest();
 
 }
