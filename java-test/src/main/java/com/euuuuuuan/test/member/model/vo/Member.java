@@ -37,7 +37,7 @@ abstract class Member {
     }
 
     public double calculateInterest() {
-        return point * 0.2;
+        return 0;
     }
 
 }
