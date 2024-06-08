@@ -4,6 +4,7 @@ import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class MemberRepository {
     private List<Member> memberList = new ArrayList<Member>();
 
@@ -23,7 +24,11 @@ public class MemberRepository {
     }
 
     public void printData() {
-
+        for (Member member : memberList) {
+            System.out.println("이름: " + member.getName());
+//            System.out.println("등급: " + member.getGrade());
+//            System.out.println("포인트: " + member.getPoint());
+        }
     }
 }
 
