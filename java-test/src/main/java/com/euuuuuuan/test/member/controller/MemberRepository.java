@@ -9,10 +9,13 @@ public class MemberRepository {
 
     public MemberRepository() {}
 
-    public void insertMember(Member m) {}
+    public void insertMember(Member m) {
 
-    public void printDate() {}
+    }
 
     public void printBuyInfo(int price) {}
+
+    public void printData() {
+    }
 
 }
