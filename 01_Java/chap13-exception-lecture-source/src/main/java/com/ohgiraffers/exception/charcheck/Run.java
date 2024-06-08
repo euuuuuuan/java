@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Run {
 
     Scanner sc = new Scanner(System.in);
-    CharacterProcess cp = new CharacterProcess();
+    com.ohgiraffers.exception.charcheck.CharacterProcess cp = new com.ohgiraffers.exception.charcheck.CharacterProcess();
 
     public static void main(String[] args) {
         Run r = new Run();
