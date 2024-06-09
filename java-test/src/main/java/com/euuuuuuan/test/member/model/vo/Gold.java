@@ -10,6 +10,11 @@ public class Gold extends Member {
 
     @Override
     public double calculateInterest() {
-        return getPoint() * 0.5;
+        return getPoint() * 0.05;
+    }
+
+    @Override
+    public int discountInterest() {
+        return (int) (10000 * 0.05);
     }
 }

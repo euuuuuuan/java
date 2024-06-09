@@ -1,6 +1,6 @@
 package com.euuuuuuan.test.member.model.vo;
 
-abstract class Member {
+public abstract class Member {
     private String name;
     private String grade;
     private int point;
@@ -39,4 +39,5 @@ abstract class Member {
     // 추상 메소드로 변경
     public abstract double calculateInterest();
 
+    public abstract int discountInterest();
 }

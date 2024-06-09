@@ -1,12 +1,13 @@
 package com.euuuuuuan.test.member.controller;
 
-import java.lang.reflect.Member;
+import com.euuuuuuan.test.member.model.vo.Member;
+import com.euuuuuuan.test.member.controller.OverMemberException;
+
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class MemberRepository {
-    private List<Member> memberList = new ArrayList<Member>();
+    private List<Member> memberList = new ArrayList<>();
 
     public MemberRepository() {
     }
@@ -21,15 +22,19 @@ public class MemberRepository {
     }
 
     public void printBuyInfo(int price) {
+        for (Member member : memberList) {
+            System.out.println(member.getGrade() + " 등급 회원 "
+                    + member.getName() + "는 " + price +"원 상품을 "
+                    + (price - member.discountInterest()) + "원에 구매합니다.");
+        }
     }
 
     public void printData() {
         for (Member member : memberList) {
-            System.out.println("이름: " + member.getName());
-//            System.out.println("등급: " + member.getGrade());
-//            System.out.println("포인트: " + member.getPoint());
+            System.out.println(member.getGrade() + " 등급 회원 "
+                    + member.getName() + "의 포인트는 " + member.getPoint()
+                    + "이고, 이자 포인트는 " + member.calculateInterest() + "입니다.");
         }
     }
 }
-
 
